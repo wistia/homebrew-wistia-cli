@@ -5,20 +5,28 @@
 class Wistia < Formula
   desc "Data API: Wistia Data API"
   homepage "https://github.com/wistia/wistia-cli"
-  version "2026.03.5"
+  version "2026.03.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wistia/wistia-cli/releases/download/v2026.03.5/wistia-cli_Darwin_x86_64.tar.gz"
-      sha256 "a2d3fc62c8dd30b61b56e057ed459c306297f9b802500a23e067d65aed1e63cb"
+      url "https://github.com/wistia/wistia-cli/releases/download/v2026.03.6/wistia-cli_Darwin_x86_64.tar.gz",
+        headers: [
+          "Accept: application/octet-stream",
+          "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
+        ]
+      sha256 "eab98e63c569fa8e701393c9b2096bd931751e3f65c963edb49d57a79822344b"
 
       define_method(:install) do
         bin.install "wistia"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wistia/wistia-cli/releases/download/v2026.03.5/wistia-cli_Darwin_arm64.tar.gz"
-      sha256 "128e807c7c4df653fbd9dd33d4e1379355dbafb9bf78fd7e5943e529274ad3b1"
+      url "https://github.com/wistia/wistia-cli/releases/download/v2026.03.6/wistia-cli_Darwin_arm64.tar.gz",
+        headers: [
+          "Accept: application/octet-stream",
+          "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
+        ]
+      sha256 "baa1fb233adfa57410cf5210a6dbb3699d3352c00a88187541afc6450e2c3259"
 
       define_method(:install) do
         bin.install "wistia"
@@ -28,15 +36,23 @@ class Wistia < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wistia/wistia-cli/releases/download/v2026.03.5/wistia-cli_Linux_x86_64.tar.gz"
-      sha256 "d3bcaee831b07ebcbf6e033474e8bc2473b64039e8a977a29ec065d2eb183be3"
+      url "https://github.com/wistia/wistia-cli/releases/download/v2026.03.6/wistia-cli_Linux_x86_64.tar.gz",
+        headers: [
+          "Accept: application/octet-stream",
+          "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
+        ]
+      sha256 "31bbfd2ad2291c2374c8a5c453d0c2725084dbb4daf00b27f1baef99fe471ce4"
       define_method(:install) do
         bin.install "wistia"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wistia/wistia-cli/releases/download/v2026.03.5/wistia-cli_Linux_arm64.tar.gz"
-      sha256 "ca2d306b11dea2dc603ccbc57fd5c3b4bf73f53c19a7060e54f4e7f0ee28dc00"
+      url "https://github.com/wistia/wistia-cli/releases/download/v2026.03.6/wistia-cli_Linux_arm64.tar.gz",
+        headers: [
+          "Accept: application/octet-stream",
+          "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
+        ]
+      sha256 "11fa49cd176c21b98f014446fb2e0d232adb9fef47f8088150c05a03b397bb78"
       define_method(:install) do
         bin.install "wistia"
       end
