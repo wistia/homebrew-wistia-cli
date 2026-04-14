@@ -5,20 +5,20 @@
 class WistiaCli < Formula
   desc "Data API: Wistia Data API"
   homepage "https://github.com/wistia/wistia-cli"
-  version "2026.04.5"
+  version "2026.04.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wistia/homebrew-wistia-cli/releases/download/v2026.04.5/homebrew-wistia-cli_Darwin_x86_64.tar.gz"
-      sha256 "97b44081788ff3d5ba0eaeba8e5ae4fdd90fd1b5301f3f162dfe1ecf2b21903c"
+      url "https://github.com/wistia/homebrew-wistia-cli/releases/download/v2026.04.6/homebrew-wistia-cli_Darwin_x86_64.tar.gz"
+      sha256 "34fd4ccab067817bd8316bb2967a693fcf7335b8a2712a38a939d0b6da27d744"
 
       define_method(:install) do
         bin.install "wistia"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wistia/homebrew-wistia-cli/releases/download/v2026.04.5/homebrew-wistia-cli_Darwin_arm64.tar.gz"
-      sha256 "32074554343c14a0ac3bde4411d34bcb3d7d339d50918584af70fd74968a4d5f"
+      url "https://github.com/wistia/homebrew-wistia-cli/releases/download/v2026.04.6/homebrew-wistia-cli_Darwin_arm64.tar.gz"
+      sha256 "4bfdf30d52fa34abcbe161a7000e985afc823af1d0c37bbfd3ecb69a74780e57"
 
       define_method(:install) do
         bin.install "wistia"
@@ -28,15 +28,15 @@ class WistiaCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wistia/homebrew-wistia-cli/releases/download/v2026.04.5/homebrew-wistia-cli_Linux_x86_64.tar.gz"
-      sha256 "1c53018e6a0f903b18f1db1b0cd2a3cea3de9be2e13ec567593ad7e150f23754"
+      url "https://github.com/wistia/homebrew-wistia-cli/releases/download/v2026.04.6/homebrew-wistia-cli_Linux_x86_64.tar.gz"
+      sha256 "3b36fcacfa751b2bcba235fda83fb7431a079b1dc5adb271fa7ae55fd99dcea8"
       define_method(:install) do
         bin.install "wistia"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wistia/homebrew-wistia-cli/releases/download/v2026.04.5/homebrew-wistia-cli_Linux_arm64.tar.gz"
-      sha256 "8541778b332fff09513231f0a84773179f58738b1273c62278ab77fbef0518d4"
+      url "https://github.com/wistia/homebrew-wistia-cli/releases/download/v2026.04.6/homebrew-wistia-cli_Linux_arm64.tar.gz"
+      sha256 "07ef019f51f3716316b203cee25666abd477e83cc3e6d29bd512a2352adbe442"
       define_method(:install) do
         bin.install "wistia"
       end
